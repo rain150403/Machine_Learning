@@ -261,8 +261,13 @@ files = open("/home/hadoop/Python/SVM/data.txt", "r")
 for line in files.readlines():
     val = line.strip().split('\t')
     # windows 下 val = line.strip().split()
-    x.append([float(val[0]), float(val[1])])
-    y.append(float(val[2]))
+    # x.append([float(val[0]), float(val[1])])
+    # y.append(float(val[2]))
+    
+    temp = val[0].split()     //very important
+    x.append([float(temp[0]), float(temp[1])])
+    y.append(float(temp[2]))
+    
 x = mat(x)
 y = mat(y).T
 # 训练模型
