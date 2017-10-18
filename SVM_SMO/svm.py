@@ -264,7 +264,7 @@ for line in files.readlines():
     # x.append([float(val[0]), float(val[1])])
     # y.append(float(val[2]))
     
-    temp = val[0].split()     //very important
+    temp = val[0].split()     # very important
     x.append([float(temp[0]), float(temp[1])])
     y.append(float(temp[2]))
     
