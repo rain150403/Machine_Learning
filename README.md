@@ -15,3 +15,6 @@ http://blog.csdn.net/qq_20282263/article/list/2
 5.kmeans
 
 6.KNN
+
+
+http://blog.csdn.net/gamer_gyt/article/details/51346159
