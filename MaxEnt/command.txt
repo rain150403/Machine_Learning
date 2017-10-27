@@ -1,0 +1,14 @@
+python
+
+import maxent
+
+model = maxent.MaxEnt()
+
+model.load_data('data/gameLocation.dat')
+
+model.train()
+
+model.predict('Sunny')
+
+
+//转自：http://lib.csdn.net/article/machinelearning/47248
