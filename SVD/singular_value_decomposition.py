@@ -66,7 +66,7 @@ def svdEst(dataMat,user,simMeas,item,percentage):
 数据矩阵的行对应用户，列对应物品，函数的作用是基于item的相似性对用户未评过分的物品进行预测评分；
 相似度衡量的方法默认用余弦相似度'''
 def recommend(dataMat,user,N=5,simMeas=cosSim,estMethod=svdEst,percentage=0.9):
-    unratedItems=nonzero(dataMat[user,:].A==0)[1]  #建立一个用户未评分item的列表
+    unratedItems=nonzero(dataMat[user,:].A==0)[1]  #建立一个用户未评分item的列表 #nonzeros(a)返回数组a中值不为零的元素的下标
     if len(unratedItems)==0:return 'you rated everything' #如果都已经评过分，则退出
     itemScores=[]
     for item in unratedItems:  #对于每个未评分的item，都计算其预测评分
