@@ -47,7 +47,7 @@ def sigmaPct(sigma,percentage):
 数据矩阵的行对应用户，列对应物品，函数的作用是基于item的相似性对用户未评过分的物品进行预测评分'''
 def svdEst(dataMat,user,simMeas,item,percentage):
     n=shape(dataMat)[1]
-    simTotal=0.0;ratSimTotal=0.0
+    simTotal=0.0;ratSimTotal=0.0  #如果要在一行中书写多条句，就必须使用分号分隔每个语句，否则Python无法识别语句之间的间隔 http://blog.csdn.net/lcz_ptr/article/details/7709395
     u,sigma,vt=la.svd(dataMat)    #矩阵分解， A = U * SIGMA * V.T
     k=sigmaPct(sigma,percentage) #确定了k的值
     sigmaK=mat(eye(k)*sigma[:k])  #构建对角矩阵
