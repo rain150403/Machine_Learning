@@ -46,7 +46,7 @@ class NaiveBayesClassifier:
             if(item[-1] not in self.trainData):
                 self.trainData[int(item[-1])] = []
             self.trainData[int(item[-1])].append(item[:-1])
-        for key in self.trainData.keys():
+        for key in self.trainData.keys():     #Python 字典(Dictionary) keys() 函数以列表返回一个字典所有的键。
             # 转换为numpy.array格式方便后续的计算
             self.trainData[key] = array(self.trainData[key])
 
@@ -54,7 +54,7 @@ class NaiveBayesClassifier:
         '''每个类中每个属性的均值'''
         self.avg = {}
         for key in self.trainData.keys():
-            self.avg[key] = self.trainData[key].mean(0)
+            self.avg[key] = self.trainData[key].mean(0)     #利用python进行数据分析之数据聚合和分组运算,https://www.cnblogs.com/splended/p/5278078.html
 
     def getStDev(self):
         '''每个类中每个属性的标准差'''
@@ -67,8 +67,13 @@ class NaiveBayesClassifier:
         result = []
         for key in self.trainData.keys():
             temp = (1 / (sqrt(2 * pi) * self.stdev[key])) * exp(-pow((item[:-1] - self.avg[key]),
-                                                                     2) / (2 * pow(self.stdev[key], 2)))
-            result.append([key, log(temp).sum()])
+                                                                     2) / (2 * pow(self.stdev[key], 2)))    #正态分布，一维高斯函数
+            result.append([key, log(temp).sum()])  
+            """
+            当特征很多的时候，大量小数值的小数乘法会有溢出风险。因此，通常的实现都是将其转换为log：
+                    log[P(C)*P(F1|C)*P(F2|C)...P(Fn|C)] = log[P(C)]+log[P(F1|C)] + ... +log[P(Fn|C)]
+            将乘法转换为加法，就彻底避免了乘法溢出风险
+            """
         result = sorted(result, key=operator.itemgetter(1), reverse=True)
         return result[0][0]
 
