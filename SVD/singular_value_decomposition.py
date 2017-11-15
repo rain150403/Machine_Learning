@@ -86,3 +86,10 @@ def recommend(dataMat,user,N=5,simMeas=cosSim,estMethod=svdEst,percentage=0.9):
 '''
 转自http://www.cnblogs.com/lzllovesyl/p/5243370.html
 '''
+
+'''
+(a) .T －－ 返回自身的转置
+(b) .H －－ 返回自身的共轭转置
+(c) .I －－ 返回自身的逆矩阵
+(d) .A －－ 返回自身数据的2维数组的一个视图（没有做任何的拷贝）
+'''
