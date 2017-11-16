@@ -6,16 +6,17 @@ import matplotlib.pyplot as plt
 isdebug = False
 
 # 指定k个高斯分布參数。这里指定k=2。注意2个高斯分布具有同样均方差Sigma，分别为Mu1,Mu2。
+# 这里sigma已经确定，只需要估计均值，而且这个是相对简化的版本
 
 def ini_data(Sigma,Mu1,Mu2,k,N):
     global X
     global Mu
     global Expectations
     X = np.zeros((1,N))
-    Mu = np.random.random(2)
+    Mu = np.random.random(2)   #要求的参数，先随机初始化一个值
     Expectations = np.zeros((N,k))
     for i in range(0,N):
-        if np.random.random(1) > 0.5:
+        if np.random.random(1) > 0.5:   #这个就是和α的选择结合了，也就是事先已经指定了，还有，这是观测数据的生成过程
             X[0,i] = np.random.normal()*Sigma + Mu1 #产生一个指定均值和方差的随机分布矩阵：将randn产生的结果乘以标准差，然后加上期望均值即可。
         else:
             X[0,i] = np.random.normal()*Sigma + Mu2
