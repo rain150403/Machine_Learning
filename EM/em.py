@@ -16,7 +16,7 @@ def ini_data(Sigma,Mu1,Mu2,k,N):
     Expectations = np.zeros((N,k))
     for i in range(0,N):
         if np.random.random(1) > 0.5:
-            X[0,i] = np.random.normal()*Sigma + Mu1
+            X[0,i] = np.random.normal()*Sigma + Mu1 #产生一个指定均值和方差的随机分布矩阵：将randn产生的结果乘以标准差，然后加上期望均值即可。
         else:
             X[0,i] = np.random.normal()*Sigma + Mu2
     if isdebug:
