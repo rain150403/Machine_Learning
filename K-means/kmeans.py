@@ -57,6 +57,8 @@ class Kmeans:
             for j in temp:
                 self.CenterPoint[i] += self.x[j, 1:].A[0]
             self.CenterPoint[i] /= len(temp)
+            
+    # https://www.cnblogs.com/kemaswill/archive/2013/01/26/2877434.html
 
     # 计算所有数据点到其最近的中心点的平均距离cost
     # 一般来说,同样的迭代次数和算法跑的次数,这个值越小代表聚类的效果越好
@@ -68,6 +70,12 @@ class Kmeans:
                                   self.CenterPoint[int(self.x[i, 0])]).A, 2)))
         return cost / self.m
 
+    
+    '''
+    确定K个初始类簇中心点
+  首先随机选择一个点作为第一个初始类簇中心点，然后选择距离该点最远的那个点作为第二个初始类簇中心点，然后再选择距离前两个点的最近距离最大的点作
+  为第三个初始类簇的中心点，以此类推，直至选出K个初始类簇中心点。
+    '''
     # 选取K个类簇中心点的初始值
     # 1、随机选择一个点作为第一个类簇中心
     # 2、    1）选择距离已有类簇中心最近的点
