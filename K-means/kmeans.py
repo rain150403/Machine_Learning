@@ -161,3 +161,6 @@ model = Kmeans(x, 4, 20)
 model.train()
 print(model.CenterPoint)
 model.draw()
+
+
+# https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html
