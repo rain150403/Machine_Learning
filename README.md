@@ -24,3 +24,10 @@ http://blog.csdn.net/qq_20282263/article/list/2
 
 
 http://blog.csdn.net/gamer_gyt/article/details/51346159
+
+##
+17.11.27
+今天挖到宝了，找到PRML的实现，值得好好学学：
+https://github.com/ctgk/PRML    分门别类的实现，很详细
+
+http://nbviewer.jupyter.org/github/lijin-THU/notes-machine-learning/blob/master/ReadMe.ipynb   有推导，看的清晰，部分内容
