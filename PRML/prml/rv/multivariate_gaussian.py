@@ -1,6 +1,10 @@
 # 依然是参数的设定与检查， 形状、尺寸、维数的设置
 # 拟合fit， 概率公式pdf， 生成分布draw
 
+# 与Gaussian分布的不同，在于，前者使用cov协方差矩阵，后者使用var方差，前者的运算都是矩阵级别的，而后者都是单个数。
+# 前者拟合简单，不涉及参数mu， cov符合什么分布的问题，但是因为涉及矩阵运算， 要考虑求和，矩阵转置能问题
+
+
 import numpy as np 
 from prml.rv.rv import RandomVariable
 
