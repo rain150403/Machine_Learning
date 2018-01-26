@@ -18,12 +18,26 @@ class SoftmaxRegressor(Classifier):
         for _ in range(max_iter):
             W_prev = np.copy(W)
             y = self._softmax(X @ W)
-            grad = X.T @ (y - T) # 好好思考，不知道是怎么求导的
+            grad = X.T @ (y - T) 
             W -= learning_rate * grad
             if np.allclose(W, W_prev):
                 break
         self.W = W
+"""     
+模型：
+h(x) = ∑wi*xi = W*X
+损失函数：
+J(w) = 1/2∑(h(xj) - yj) ^ 2
 
+
+解析解：
+w = (X.T * X)^-1 * X.T * Y
+梯度下降解
+gradient = X.T ` (Y - h(X)) 对损失函数求导即可
+w_i+1 = w_i + gradient * alpha
+
+http://www.cnblogs.com/Finley/p/5325417.html
+"""
     def _softmax(self, a):
         a_max = np.max(a, axis=-1, keepdims=True)
         exp_a = np.exp(a - a_max)
