@@ -174,4 +174,3 @@ C > 0 称为惩罚参数， 一般由应用问题决定， C 值大时对误分�
 		"""
 		distance =  np.sum( self.a * self.t * self.kernel(x, self.X), axis = -1) + self.b P124---（3）
 		return distance
-。
