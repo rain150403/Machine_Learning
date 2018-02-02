@@ -52,9 +52,9 @@ class CategoricalHMM(HiddenMarkovModel):
         return np.asarray(seq)
 
     def likelihood(self, X):
-        return self.means[X] # 不知道这是什么意思，怎么就这么一个操作
+        return self.means[X] # 就是这个输入X所对应的均值，用来近似代替这个值呗， 或者说，就是要确定mean这个参数
 
-    def maximize(self, seq, p_hidden, p_transition): # 不知道这里做了什么操作，难不成是EM算法？？？
+    def maximize(self, seq, p_hidden, p_transition): # 不知道这里做了什么操作，难不成是EM算法？？？这个的参数就是mean。整个过程就是为了求mean。看看Gaussian HMM，有助于理解
         self.initial_proba = p_hidden[0] / np.sum(p_hidden[0])
         self.transition_proba = np.sum(p_transition, axis=0) / np.sum(p_transition, axis=(0, 2))
         x = p_hidden[:, None, :] * (np.eye(self.ndim)[seq])[:, :, None]
