@@ -1,4 +1,5 @@
 """
+# 这一节应该看的还有遗漏，等把RVM for regressor那节的链接看完，还有像极大似然，map这些基础看完，自然就懂了
 简单来说，RVM就是基于贝叶斯思想的，涉及概率问题。
 
 相关向量机（Relevance vector machine,简称RVM）是Tipping在2001年在贝叶斯框架的基础上提出的，
