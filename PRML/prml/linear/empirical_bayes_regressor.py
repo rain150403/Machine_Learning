@@ -38,7 +38,7 @@ class EmpiricalBayesRegressor(Regressor):
 	def log_evidence(self, X, t):
 		"""
 		log evidence function 
-    根本不理解？？？
+		
 		Parameters
 		----------
 		X : ndarray (sample_size, n_features)
@@ -59,7 +59,7 @@ class EmpiricalBayesRegressor(Regressor):
 			- self.beta * np.square(t - X @ self.w_mean).sum()
 			- self.alpha * np.sum(self.w_mean**2)
 			- np.linalg.slogdet(self.w_precision)[1] # Compute the sign and (natural) logarithm of the determinant of an array.
-			- len(t) * np.log(2 * np.pi)
+			- len(t) * np.log(2 * np.pi)   # PRML ---- P167---3.86
 		)
 
 	# 这里跟上一个bayesian regressor一样
