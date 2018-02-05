@@ -5,7 +5,7 @@
 # 总有蝴蝶过沧海
 
 #########################################################################
-
+# 具体怎么体现变分的，看书
 import numpy as np
 from prml.linear.regressor import Regressor 
 
