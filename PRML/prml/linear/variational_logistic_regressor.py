@@ -1,4 +1,4 @@
-# 这个还是不太懂，需要看看原版书才行了，好像看《PRML》纸质版
+# 这个还是不太懂，需要看看原版书才行了，好像看《PRML》纸质版， # PRML P500
 import numpy as np
 from prml.linear.logistic_regressor import LogisticRegressor
 
