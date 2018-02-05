@@ -229,3 +229,6 @@ plt.xlim(-7, 7)
 plt.ylim(-7, 7)
 plt.gca().set_aspect('equal', adjustable = 'box')
 plt.show()
+
+
+# 能力配得上心气儿， 态度得配得上欲望
