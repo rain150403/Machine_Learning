@@ -31,3 +31,6 @@ http://blog.csdn.net/gamer_gyt/article/details/51346159
 https://github.com/ctgk/PRML    分门别类的实现，很详细
 
 http://nbviewer.jupyter.org/github/lijin-THU/notes-machine-learning/blob/master/ReadMe.ipynb   有推导，看的清晰，部分内容
+
+
+https://github.com/fxlantian/ann  这是手写字符识别上硬件实现的项目。
