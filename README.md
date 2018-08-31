@@ -34,3 +34,7 @@ http://nbviewer.jupyter.org/github/lijin-THU/notes-machine-learning/blob/master/
 
 
 https://github.com/fxlantian/ann  这是手写字符识别上硬件实现的项目。
+##
+18.08.31
+《python机器学习算法》的代码实现，本书对机器学习算法介绍的比较清楚，易懂。
+https://github.com/zhaozhiyong19890102/Python-Machine-Learning-Algorithm
