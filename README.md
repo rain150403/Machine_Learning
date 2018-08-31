@@ -38,3 +38,6 @@ https://github.com/fxlantian/ann  这是手写字符识别上硬件实现的项
 18.08.31
 《python机器学习算法》的代码实现，本书对机器学习算法介绍的比较清楚，易懂。
 https://github.com/zhaozhiyong19890102/Python-Machine-Learning-Algorithm
+
+机器学习画图
+http://www.astroml.org/book_figures/chapter8/fig_huber_loss.html
